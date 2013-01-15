@@ -1,8 +1,8 @@
 make:	babble.cpp
-	g++ babble.cpp -o inJava
+	g++ babble.cpp -o injavac
 
-run: 	inJava
-	./inJava
+run: 	injavac
+	@./injavac
 
-install:	inJava 
-	sudo binstall inJava
+install:	injavac 
+	sudo binstall injavac
