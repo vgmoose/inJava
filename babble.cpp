@@ -44,18 +44,19 @@ int main()
 		getline(fin, buf);
 
 		if (!lineIsEmpty(buf))
-		{
+		 {
 			numberOfTabs = countTabs(buf, 0);
 
 			if (numberOfTabs < previousTabCount)
 			{
 				previousTabCount--;
+				cout << "\n";
 				fillTabs(previousTabCount);
 				cout << "}\n" << buf;
 			}
 
 			else if (numberOfTabs == previousTabCount)
-				cout << buf; 
+				cout << "\n" << buf; 
 
 			else
 			{

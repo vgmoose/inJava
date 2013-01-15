@@ -1,3 +1,54 @@
-public class Data
+// Ricky Ayoub
+// 4/30/09
+// WAR
+
+public class war
 	public static void main (String[] args)
-		System.out.println("Hello world");
+		
+		int player_card=(int)(Math.random()*13+2);
+		int player_suit=(int)(Math.random()*4+1);
+		int computer_card=(int)(Math.random()*13+2);
+		int computer_suit=(int)(Math.random()*4+1);
+		int current_card=player_card,current_suit=player_suit;
+		
+		System.out.print("You drew a");	
+		
+		for (int i=1;i<=2;i++)
+			if (current_card==14)
+				System.out.print("n ACE");
+			else if (current_card==11)
+				System.out.print(" JACK");
+			else if (current_card==12)
+				System.out.print(" QUEEN");
+			else if (current_card==13)
+				System.out.print(" KING");
+			else
+				System.out.print(" "+current_card);
+			
+			System.out.print(" of ");
+				
+			if (current_suit==1)
+				System.out.print("SPADES");
+			else if (current_suit==2)
+				System.out.print("CLUBS");
+			else if (current_suit==3)
+				System.out.print("HEARTS");
+			else
+				System.out.print("DIAMONDS");
+			
+			if (i==1)	
+				System.out.print("\nAnd the computer drew a");					
+				
+			current_card=computer_card;
+			current_suit=computer_suit;	
+		System.out.print("\nWhich of course means that "); 
+		
+		if (player_card==computer_card)
+			System.out.print("it's a tie!\n");
+		else if (player_card>computer_card)
+			System.out.print("you");
+		else
+			System.out.print("the computer");
+			
+		if (player_card!=computer_card)
+			System.out.println(" won!");	
